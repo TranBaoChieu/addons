@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+FacebookSetting.access_facebook_manager,Facebook Manager,FacebookSetting.model_facebook,facebook_group_manager,1,1,1,1
+FacebookSetting.access_fanpage_user,Fanpage User,FacebookSetting.model_fanpage,,1,1,1,0
+FacebookSetting.access_fanpage_manager,Fanpage Manager,FacebookSetting.model_fanpage,,1,1,1,1
+FacebookSetting.access_product_page_user,Product Fanpage User,FacebookSetting.model_product_page,,1,1,1,0
+FacebookSetting.access_product_page_manager,Product Fanpage Manager,FacebookSetting.model_product_page,,1,1,1,1

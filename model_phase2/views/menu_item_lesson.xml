@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_tourdulich_tour_tree" model="ir.ui.view">
+    <field name="name">Tour du lịch - Tree View</field>
+    <field name="model">tourdulich_tour</field>
+    <field name="arch" type="xml">
+        <tree string="Danh sách tour du lịch">
+            <field name="tour_name"/>
+            <field name="tour_id"/>
+            <field name="quantity"/>
+            <field name="employee_id"/>
+            <field name="start_date"/>
+            <field name="end_date"/>
+            <field name="state"/>
+        </tree>
+    </field>
+</record>
+    <record id="view_tourdulich_tour_form" model="ir.ui.view">
+    <field name="name">Tour du lịch - Form View</field>
+    <field name="model">tourdulich_tour</field>
+    <field name="arch" type="xml">  
+        <form string="Thông tin chi tiết tour du lịch">
+            <sheet>
+                <group>
+                    <field name="tour_name"/>
+                    <field name="tour_id"/>
+                    <field name="quantity"/>
+                    <field name="employee_id"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="state"/>
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+</odoo>

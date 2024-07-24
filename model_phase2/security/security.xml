@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+        <record id="dichvutour_group_user" model="res.groups">
+            <field name="name">Dichvutour User</field>
+            <field name="category_id" ref="base.module_category_tutorial" />
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+        <record id="dichvutour_group_manager" model="res.groups">
+            <field name="name">Dichvutour Manager</field>
+            <field name="category_id" ref="base.module_category_tutorial" />
+            <field name="implied_ids" eval="[(4, ref('dichvutour_group_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root')),(4, ref('base.user_admin'))]"/>
+        </record>
+        <record id="lichtrinhtour_group_user" model="res.groups">
+            <field name="name">Lichtrinhtour User</field>
+            <field name="category_id" ref="base.module_category_tutorial" />
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+        <record id="lichtrinhtour_group_manager" model="res.groups">
+            <field name="name">Lichtrinhtour Manager</field>
+            <field name="category_id" ref="base.module_category_tutorial" />
+            <field name="implied_ids" eval="[(4, ref('lichtrinhtour_group_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root')),(4, ref('base.user_admin'))]"/>
+        </record>
+         <record id="tourdulich_group_user" model="res.groups">
+            <field name="name">Tourdulich User</field>
+            <field name="category_id" ref="base.module_category_tutorial" />
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+        <record id="tourdulich_group_manager" model="res.groups">
+            <field name="name">Tourdulich Manager</field>
+            <field name="category_id" ref="base.module_category_tutorial" />
+            <field name="implied_ids" eval="[(4, ref('tourdulich_group_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root')),(4, ref('base.user_admin'))]"/>
+        </record>
+    </data>
+</odoo>

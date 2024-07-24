@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+ <!-- Menu root -->
+    <menuitem
+        id="menu_course_root"
+        name="Tour"
+        sequence="2"/>
+              
+    <menuitem id="menu_course_2"
+        parent="menu_course_root"
+        action="action_course_item_2_form"
+        sequence="1"/>
+</odoo>

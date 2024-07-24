@@ -1,0 +1,28 @@
+<odoo>
+    <data>
+        <template id="FacebookSetting.success" name="Awesome T-Shirt thank you">
+            <html>
+                <body>
+                    <div>
+                        <!-- Kiểm tra xem có dữ liệu từ API không -->
+                        <t t-if="api_data">
+                            <t t-set="my_json_data" t-value="api_data"/>
+                            <!-- Lặp qua các phần tử trong danh sách JSON -->
+                            <t t-foreach="my_json_data['data']" t-as="item">
+                                <!-- Kiểm tra xem phần tử hiện tại có thuộc tính "name" không -->
+                                <t t-if="item.get('name')">
+                                    <!-- Lấy giá trị của thuộc tính "name" -->
+                                    <p>Product Name: <t t-esc="item.get('name')"/></p>
+                                </t>
+                            </t>
+                        </t>
+                        <!-- Hiển thị thông báo nếu không có dữ liệu từ API -->
+                        <t t-if="not api_data">
+                            <p>No data available</p>
+                        </t>
+                    </div>
+                </body>
+            </html>
+        </template>
+    </data>
+</odoo>

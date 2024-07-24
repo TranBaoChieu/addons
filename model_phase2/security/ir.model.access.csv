@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+model_phase2.access_model_phase2_dichvutour_user,Dichvutour User,model_phase2.model_dichvutour_tour,dichvutour_group_user,1,1,1,0
+model_phase2.access_model_phase2_dichvutour_manager,Dichvutour Manager,model_phase2.model_dichvutour_tour,dichvutour_group_manager,1,1,1,1
+model_phase2.access_model_phase2_lichtrinhtour_user,Lichtrinhtour User,model_phase2.model_lichtrinhtour_tour,lichtrinhtour_group_user,1,1,1,0
+model_phase2.access_model_phase2_lichtrinhtour_manager,Lichtrinhtour Manager,model_phase2.model_lichtrinhtour_tour,lichtrinhtour_group_manager,1,1,1,0
+model_phase2.access_model_phase2_tourdulich_user,Tourdulich User,model_phase2.model_tourdulich_tour,tourdulich_group_user,1,1,1,1
+model_phase2.access_model_phase2_tourdulich_manager,Tourdulich Manager,model_phase2.model_tourdulich_tour,tourdulich_group_manager,1,1,1,0

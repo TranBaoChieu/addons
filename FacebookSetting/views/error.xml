@@ -1,0 +1,17 @@
+<odoo>
+    <template id="FacebookSetting.error" name="Error Page">
+        <html>
+            <body>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>Error</h1>
+                            <p>An error occurred while trying to share your product on Facebook.</p>
+                            <p><a href="/">Back to Home</a></p>
+                        </div>
+                    </div>
+                </div>
+            </body>
+        </html>
+    </template>
+</odoo>

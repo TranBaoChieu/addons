@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_partner_form_inherit_table">
+            <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[@name='contact_addresses']" position="after">
+                    <page string="Facebook" name="facebook" groups="base.group_user">
+                        <field name="res_partner_id"  widget="one2many"> 
+                            <tree string="Facebook">
+                                <field name="facebook_field"/>
+                                <field name="avatar_facebook" widget="image"/>
+                                <field name="access_token"/>                         
+                                <field name="client_id"/>                         
+                                <field name="client_secret" password="True"/>                         
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+                   <xpath expr="//notebook/page[@name='facebook']" position="before">
+                    <page string="Fanpage" name="fanpage" groups="facebook.facebook_group_user">
+                        <field name="res_partner_fanpage_id"  widget="one2many">
+                            <tree string="Fanpage">
+                                <field name="page_name"/>
+                                <field name="page_category" />
+                                <field name="page_status" />
+                                <field name="page_avt" widget="image"/>
+                                <field name="ct_p_id" widget="many2many_tags"/>                      
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

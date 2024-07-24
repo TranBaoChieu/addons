@@ -1,0 +1,53 @@
+<odoo>
+  <data>
+
+    <record id="action_facebook_live_api" model="ir.actions.server">
+      <field name="name">Call Facebook API</field>
+      <field name="model_id" ref="model_facebook_live"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = records.call_facebook_api()
+      </field>
+    </record>
+
+    <record id="facebook_live_tree_view" model="ir.ui.view">
+      <field name="name">facebook.live.tree</field>
+      <field name="model">facebook.live</field>
+      <field name="arch" type="xml">
+        <tree string="Facebook Live">
+
+          <field name="name" string="Name"/>
+          <field name="description" string="Description"/>
+          <field name="image" widget="image"/>
+          <button name="%(action_facebook_live_api)d" type="action" string="Call Facebook API" class="oe_highlight"/>
+
+<!--          <button href="/call_facebook_api" type="action" string="Call Facebook API" class="oe_highlight"/>-->
+
+<!--          <button name="call_facebook_api" type="object" string="Call Facebook API"/>-->
+<!--          <function name="call_facebook_api" model="facebook.live" invisible="1"/>-->
+        </tree>
+      </field>
+    </record>
+
+
+
+    <record id="facebook_live_form_view" model="ir.ui.view">
+      <field name="name">facebook.live.form</field>
+      <field name="model">facebook.live</field>
+      <field name="arch" type="xml">
+        <form string="Facebook Live">
+          <field name="name"/>
+          <field name="description"/>
+          <field name="image" widget="image"/>
+        </form>
+      </field>
+    </record>
+
+    <record id="action_facebook_live_view" model="ir.actions.act_window">
+      <field name="name">Facebook Live</field>
+      <field name="res_model">facebook.live</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+  </data>
+</odoo>

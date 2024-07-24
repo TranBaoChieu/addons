@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem
+      id="menu_field"
+      name="Facebook Setting"
+      />
+
+    <record id="facebook_action" model="ir.actions.act_window">
+      <field name="name">Facebook Setting</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">facebook</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+      id="facebook_menu"
+      name="Facebook"
+      action="facebook_action"
+      parent="menu_field"/>
+
+    <menuitem
+      id="menu_fanpage"
+      name="Fanpage Setting"
+      />
+
+    <record id="fanpage_action" model="ir.actions.act_window">
+      <field name="name">Fanpage Setting</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">fanpage</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+      id="fanpage_menu"
+      name="Fanpage"
+      action="fanpage_action"
+      parent="menu_fanpage"/>
+
+</odoo>

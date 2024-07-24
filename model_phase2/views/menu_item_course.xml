@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="action_course_item_2_form" model="ir.actions.act_window">
+    <field name="name">Tour du lịch</field>
+    <field name="res_model">tourdulich_tour</field>
+    <field name="view_mode">tree,form</field>
+    <!-- Đặt view_id eval="False" để Odoo tự chọn view phù hợp -->
+    <!-- <field name="view_id" eval="False"/> -->
+    <field name="domain">[]</field>
+    <field name="context">{}</field>
+    <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+            Hãy thêm một tour du lịch
+        </p>
+    </field>
+</record>
+</odoo>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_form_facebook" model="ir.ui.view">
+      <field name="name">facebook.view.form</field>
+      <field name="model">facebook</field>
+      <field name="arch" type="xml">
+        <form string="Facebook Setting">
+          <sheet>
+            <group name="group_top" string="Facebook Setting">
+              <group name="group_left">
+                <field name="facebook_field"/>
+                <field name="avatar_facebook" widget="image"/>
+                <field name="access_token"/>
+                <field name="client_id"/>
+                <field name="client_secret" password="True"/>
+              </group>  
+            </group>
+            <button name="show_name" string="Load" type="object" class="oe_highlight"/>
+            <button name="show_category" string="Show Category" type="object" class="oe_highlight"/>
+          </sheet>
+        </form>
+      </field>
+    </record>
+    
+    <record id="facebook_view_tree" model="ir.ui.view">
+          <field name="name">facebook.view.tree</field>
+          <field name="model">facebook</field>
+          <field name="arch" type="xml">
+            <tree string="Facebook Setting">
+              <field name="facebook_field"/>
+              <field name="avatar_facebook" widget="image"/>
+              <field name="access_token"/>
+              <field name="client_id"/>
+              <field name="client_secret" password="True"/>
+            </tree>
+          </field>
+    </record>
+    <record id="view_form_fanpage" model="ir.ui.view">
+      <field name="name">fanpage.view.form</field>
+      <field name="model">fanpage</field>
+      <field name="arch" type="xml">
+        <form string="Fanpage Setting">
+          <sheet>
+            <group name="group_top" string="Fanpage Setting">
+              <group name="group_left">
+                <field name="page_name"/>
+                <field name="page_category" />
+                <field name="page_status" />
+                <field name="page_avt" widget="image"/>
+                <field name="ct_p_id" widget="many2many_tags"/>
+              </group>  
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+    
+    <record id="fanpage_view_tree" model="ir.ui.view">
+          <field name="name">fanpage.view.tree</field>
+          <field name="model">fanpage</field>
+          <field name="arch" type="xml">
+            <tree string="Fanpage Setting">
+              <field name="page_name"/>
+              <field name="page_category" />
+              <field name="page_status" />
+              <field name="page_avt" widget="image"/>
+              <field name="ct_p_id" widget="many2many_tags"/>
+            </tree>
+          </field>
+    </record>
+</odoo>

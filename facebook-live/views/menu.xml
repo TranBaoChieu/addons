@@ -1,0 +1,12 @@
+<odoo>
+    <data>
+          
+        <menuitem id="menu_root" name="Facebook Post"  sequence="2"/>
+         <!-- Menu facebook post -->
+        <menuitem id="facebook_post_view_menu" name="Post" action="action_facebook_live_view" parent="menu_root"  sequence="0"/>
+           <!-- Menu facebook page -->
+        <menuitem id="facebook_page_view_menu" name="Page" action="action_facebook_page_view" parent="menu_root"  sequence="1"/>
+        <!-- Menu category page -->
+         <menuitem id="facebook_category_view_menu" name="Category" action="action_facebook_category" parent="menu_root"  sequence="2"/>
+    </data>
+</odoo>

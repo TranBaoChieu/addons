@@ -1,0 +1,6 @@
+<odoo>
+    <data>
+        <menuitem id="menu_root" name="Facebook Live" action="action_facebook_live_view"/>
+        <menuitem id="facebook_live_view_menu" name="View" action="action_facebook_live_view" parent="menu_root"/>
+    </data>
+</odoo>

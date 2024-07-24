@@ -1,0 +1,135 @@
+<odoo>
+  <data>
+    <record id="action_facebook_live_api" model="ir.actions.server">
+      <field name="name">Call Facebook API</field>
+      <field name="model_id" ref="model_facebook_live"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = records.call_facebook_api()
+      </field>
+    </record>
+
+    <record id="facebook_live_tree_view" model="ir.ui.view">
+      <field name="name">facebook.live.tree</field>
+      <field name="model">facebook.live</field>
+      <field name="arch" type="xml">
+        <tree string="Facebook Live">
+          <field name="name" string="Name"/>
+          <field name="name_page" string="page"/>
+          <field name="description" string="Description"/>
+          <field name="image" widget="image"/>
+          <button name="%(action_facebook_live_api)d" type="action" string="Call Facebook API" class="oe_highlight"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="facebook_live_form_view" model="ir.ui.view">
+      <field name="name">facebook.live.form</field>
+      <field name="model">facebook.live</field>
+      <field name="arch" type="xml">
+        <form string="Facebook Live">
+        <sheet>
+            <group>
+          <field name="name"/>
+          <field name="name_page"/>
+          <field name="description"/>
+          <field name="image" widget="image"/>
+          </group>
+           </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="action_facebook_live_view" model="ir.actions.act_window">
+      <field name="name">Facebook Live</field>
+      <field name="res_model">facebook.live</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+<!-- Page_facebook -->
+      <record id="action_fetch_facebook_pages" model="ir.actions.server">
+      <field name="name">Fetch Facebook Pages</field>
+      <field name="model_id" ref="model_facebook_page"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = records.fetch_facebook_pages()
+      </field>
+    </record>
+
+     <!-- Tree View Page Facebook -->
+    <record id="view_facebook_page_tree" model="ir.ui.view">
+        <field name="name">facebook.page.tree</field>
+        <field name="model">facebook.page</field>
+        <field name="arch" type="xml">
+            <tree string="Facebook Page">
+                <field name="name"/>
+                <field name="page_id"/>
+                <field name="category"/>
+                <field name="category_list"/>
+                <!-- <field name="access_token"/> -->
+                  <button name="%(action_fetch_facebook_pages)d" type="action" string="Update Pages" class="oe_highlight"/>
+            </tree>
+        </field>
+    </record>
+
+     <!-- Form View Page Facebook-->
+    <record id="view_facebook_page_form" model="ir.ui.view">
+        <field name="name">facebook.page.form</field>
+        <field name="model">facebook.page</field>
+        <field name="arch" type="xml">
+            <form string="Facebook Page">
+                <sheet> 
+                    <group>
+                        <field name="name"/>
+                        <field name="page_id"/>
+                        <field name="category"/>
+                        <field name="category_list"/>
+                        <!-- <field name="access_token"/> -->
+                    </group>
+                      
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+     <record id="action_facebook_page_view" model="ir.actions.act_window">
+        <field name="name">Facebook Pages</field>
+        <field name="res_model">facebook.page</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+     <!-- Tree view for Facebook Categories -->
+        <record id="view_facebook_category_tree" model="ir.ui.view">
+            <field name="name">facebook.category.tree</field>
+            <field name="model">facebook.category</field>
+            <field name="arch" type="xml">
+                <tree string="Facebook Categories">
+                    <field name="category_name"/>
+                    <field name="category_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form view for Facebook Categories -->
+        <record id="view_facebook_category_form" model="ir.ui.view">
+            <field name="name">facebook.category.form</field>
+            <field name="model">facebook.category</field>
+            <field name="arch" type="xml">
+                <form string="Facebook Category">
+                    <sheet>
+                        <group>
+                            <field name="category_name"/>
+                            <field name="category_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action to open the list of Facebook Categories -->
+        <record id="action_facebook_category" model="ir.actions.act_window">
+            <field name="name">Facebook Categories</field>
+            <field name="res_model">facebook.category</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+  </data>
+</odoo> 
