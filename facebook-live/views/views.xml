@@ -18,7 +18,7 @@
           <field name="name_page" string="page"/>
           <field name="description" string="Description"/>
           <field name="image" widget="image"/>
-          <button name="%(action_facebook_live_api)d" type="action" string="Call Facebook API" class="oe_highlight"/>
+          <button name="%(action_facebook_live_api)d" type="action" string="Post to facebook" class="oe_highlight"/>
         </tree>
       </field>
     </record>
@@ -96,8 +96,17 @@
         <field name="res_model">facebook.page</field>
         <field name="view_mode">tree,form</field>
     </record>
+<!-- Facebook category -->
 
-     <!-- Tree view for Facebook Categories -->
+      <record id="action_fetch_category_facebook" model="ir.actions.server">
+          <field name="name">Fetch Facebook Category</field>
+          <field name="model_id" ref="model_facebook_category"/>
+          <field name="state">code</field>
+          <field name="code">
+                 action = records.fetch_facebook_categories()
+          </field>
+      </record>
+
         <record id="view_facebook_category_tree" model="ir.ui.view">
             <field name="name">facebook.category.tree</field>
             <field name="model">facebook.category</field>
@@ -105,6 +114,7 @@
                 <tree string="Facebook Categories">
                     <field name="category_name"/>
                     <field name="category_id"/>
+                    <button name="%(action_fetch_category_facebook)d" type="action" string="Update Category" class="oe_highlight"/>
                 </tree>
             </field>
         </record>
@@ -131,5 +141,7 @@
             <field name="res_model">facebook.category</field>
             <field name="view_mode">tree,form</field>
         </record>
+        
+       
   </data>
 </odoo> 
