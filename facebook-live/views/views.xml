@@ -82,8 +82,8 @@
                         <field name="name"/>
                         <field name="page_id"/>
                         <field name="category"/>
-                        <field name="category_list"/>
-                        <!-- <field name="access_token"/> -->
+                        <field name="category_list"/> 
+                        <field name="access_token"/>
                     </group>
                       
                 </sheet>
@@ -112,8 +112,10 @@
             <field name="model">facebook.category</field>
             <field name="arch" type="xml">
                 <tree string="Facebook Categories">
-                    <field name="category_name"/>
-                    <field name="category_id"/>
+                    <field name="facebook_name"/>
+                    <field name="facebook_id"/>
+                    <field name="parent_category"/>
+                    <field name="parent_category_path"/>
                     <button name="%(action_fetch_category_facebook)d" type="action" string="Update Category" class="oe_highlight"/>
                 </tree>
             </field>
@@ -127,8 +129,10 @@
                 <form string="Facebook Category">
                     <sheet>
                         <group>
-                            <field name="category_name"/>
-                            <field name="category_id"/>
+                            <field name="facebook_name"/>
+                            <field name="facebook_id"/>
+                            <field name="parent_category"/>
+                            <field name="parent_category_path"/>
                         </group>
                     </sheet>
                 </form>
@@ -141,7 +145,5 @@
             <field name="res_model">facebook.category</field>
             <field name="view_mode">tree,form</field>
         </record>
-        
-       
   </data>
 </odoo> 
